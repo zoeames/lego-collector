@@ -24,6 +24,10 @@ class App extends React.Component {
     this.setState({ selectedSet: findIt });
   }
 
+  closeBigCard = () => {
+    this.setState({ selectedSet: {} });
+  }
+
   render() {
     const { selectedSets, selectedSet } = this.state;
     return (
@@ -31,7 +35,7 @@ class App extends React.Component {
         <div className="container">
           <h1>LEGO SETS</h1>
           <LegoCardContainer sets={selectedSets} openBigCard={this.openBigCard}/>
-          <BigCard set={selectedSet}/>
+          <BigCard set={selectedSet} closeBigCard={this.closeBigCard}/>
         </div>
       </div>
     );

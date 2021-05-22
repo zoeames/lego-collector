@@ -3,11 +3,16 @@ import './BigCard.scss';
 
 class BigCard extends React.Component {
   render() {
-    const { set } = this.props;
+    const { set, closeBigCard } = this.props;
     return (
-      <div className="BigCard col">
-        <h2>{set.name}</h2>
-      </div>
+      set.name
+        ? (
+          <div className="BigCard col">
+            <button className="btn btn-outline-dark" aria-label="close the card" onClick={() => closeBigCard()}><i class="far fa-times-circle"></i></button>
+            <h2>{set.name}</h2>
+          </div>
+        )
+        : ''
     );
   }
 }
