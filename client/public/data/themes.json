@@ -1,0 +1,67 @@
+{
+	"themes": [{
+			"id": "theme01",
+			"name": "Architecture"
+		},
+		{
+			"id": "theme02",
+			"name": "City"
+		},
+		{
+			"id": "theme03",
+			"name": "Classic"
+		},
+		{
+			"id": "theme04",
+			"name": "Creator 3-in-1"
+		},
+		{
+			"id": "theme05",
+			"name": "Creator Expert"
+		},
+		{
+			"id": "theme06",
+			"name": "Disney"
+		},
+		{
+			"id": "theme07",
+			"name": "Friends"
+		},
+		{
+			"id": "theme08",
+			"name": "Harry Potter"
+		},
+		{
+			"id": "theme09",
+			"name": "Ideas"
+		},
+		{
+			"id": "theme10",
+			"name": "Jurassic World"
+		},
+		{
+			"id": "theme11",
+			"name": "Minifigures"
+		},
+		{
+			"id": "theme12",
+			"name": "Star Wars"
+		},
+		{
+			"id": "theme13",
+			"name": "Stranger Things"
+		},
+		{
+			"id": "theme14",
+			"name": "Technic"
+		},
+    {
+      "id": "theme15",
+			"name": "Beach"
+    },
+    {
+      "id": "theme16",
+			"name": "NASA"
+    }
+	]
+}
