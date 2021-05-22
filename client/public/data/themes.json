@@ -54,6 +54,14 @@
 		{
 			"id": "theme14",
 			"name": "Technic"
-		}
+		},
+    {
+      "id": "theme15",
+			"name": "Beach"
+    },
+    {
+      "id": "theme16",
+			"name": "NASA"
+    }
 	]
 }

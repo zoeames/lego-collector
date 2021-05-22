@@ -1,0 +1,28 @@
+{
+	"themes": [
+    {
+			"id": "brickSeparatorColor01",
+			"name": "NONE",
+      "color": "NONE",
+      "imageUrl":""
+		},
+    {
+			"id": "brickSeparatorColor02",
+			"name": "Orange Brick Separator",
+      "color": "#FE8A18",
+      "imageUrl":"https://cdn.rebrickable.com/media/thumbs/parts/elements/4654448.jpg/250x250p.jpg?1610895711.2261183"
+		},
+    {
+			"id": "brickSeparatorColor03",
+			"name": "Dark Turquoise Brick Separator",
+      "color": "#008F9B",
+      "imageUrl":"https://cdn.rebrickable.com/media/thumbs/parts/elements/6254100.jpg/250x250p.jpg?1610942927.436538"
+		},
+    {
+			"id": "brickSeparatorColor04",
+			"name": "Green Brick Separator",
+      "color": "#237841",
+      "imageUrl":"https://cdn.rebrickable.com/media/thumbs/parts/elements/6000102.jpg/250x250p.jpg?1610959862.511398"
+		}
+  ]
+}
