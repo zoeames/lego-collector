@@ -1,12 +1,27 @@
 import React from 'react';
 import './App.scss';
 
+import LegoCardContainer from '../containers/LegoCardContainer/LegoCardContainer';
+import setData from '../helpers/data/setData';
+
 class App extends React.Component {
+  state = {
+    sets: [],
+  }
+
+  componentDidMount() {
+    setData.getSets()
+      .then((sets) => this.setState({ sets }))
+      .catch((err) => console.error('error getting sets: ', err));
+  }
+
   render() {
+    const { sets } = this.state;
     return (
       <div className="App">
-        <h2>INSIDE APP COMPONENT</h2>
-        <button className="btn btn-info"><i className="fad fa-alicorn"></i></button>
+        <div className="container">
+          <LegoCardContainer sets={sets}/>
+        </div>
       </div>
     );
   }

@@ -1,0 +1,19 @@
+.LegoCard {
+  // img {
+    // opacity: 0.25;
+  // }
+  .title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 15px 0;
+    margin: 0;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
