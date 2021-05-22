@@ -1,3 +1,11 @@
+@import '../../styles/colors';
+
 .BigCard{
-  display: block;
+  border: 3px solid $teal;
+  margin: 20px 0;
+  padding: 20px;
+  .close-btn {
+    float: right;
+    cursor: pointer !important;
+  }
 }

@@ -34,7 +34,7 @@ class App extends React.Component {
       <div className="App">
         <div className="container">
           <h1>LEGO SETS</h1>
-          <LegoCardContainer sets={selectedSets} openBigCard={this.openBigCard}/>
+          <LegoCardContainer sets={selectedSets} openBigCard={this.openBigCard} selectedSet={selectedSet}/>
           <BigCard set={selectedSet} closeBigCard={this.closeBigCard}/>
         </div>
       </div>

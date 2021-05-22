@@ -5,11 +5,11 @@ import LegoCard from '../../components/LegoCard/LegoCard';
 
 class LegoCardContainer extends React.Component {
   render() {
-    const { sets, openBigCard } = this.props;
+    const { sets, openBigCard, selectedSet } = this.props;
     return (
       <div className="LegoCardContainer">
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-            {sets.map((set) => <LegoCard key={set.id} set={set} openBigCard={openBigCard}/>)}
+            {sets.map((set) => <LegoCard key={set.id} set={set} openBigCard={openBigCard} selectedSet={selectedSet}/>)}
         </div>
       </div>
     );
