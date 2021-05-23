@@ -1,11 +1,60 @@
 @import '../../styles/colors';
 
 .BigCard{
+  position: relative;
   border: 3px solid $teal;
-  margin: 20px 0;
+  margin-top: 20px;
   padding: 20px;
   .close-btn {
     float: right;
     cursor: pointer !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .LegoCard:nth-child(2n + 1) .BigCard{
+    width: 207%;
+  }
+
+  .LegoCard:nth-child(2n + 2) .BigCard{
+    width: 207%;
+    left: -107%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .LegoCard:nth-child(3n + 1) .BigCard{
+    width: 316%;
+  }
+
+  .LegoCard:nth-child(3n + 2) .BigCard{
+    width: 316%;
+    left: -108%;
+  }
+
+  .LegoCard:nth-child(3n + 3) .BigCard{
+    width: 316%;
+    left: -216%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .LegoCard:nth-child(4n + 1) .BigCard{
+    width: 422%;
+  }
+
+  .LegoCard:nth-child(4n + 2) .BigCard{
+    width: 422%;
+    left: -107%;
+  }
+
+  .LegoCard:nth-child(4n + 3) .BigCard{
+    width: 422%;
+    left: -214%;
+  }
+
+  .LegoCard:nth-child(4n + 4) .BigCard{
+    width: 422%;
+    left: -321%;
   }
 }
