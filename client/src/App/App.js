@@ -3,39 +3,36 @@ import './App.scss';
 
 import LegoCardContainer from '../containers/LegoCardContainer/LegoCardContainer';
 import setData from '../helpers/data/setData';
-import BigCard from '../components/BigCard/BigCard';
 
 class App extends React.Component {
   state = {
     sets: [],
-    selectedSets: [],
-    selectedSet: {},
+    filteredSets: [],
+    selectedSet: '',
   }
 
   componentDidMount() {
     setData.getSets()
-      .then((sets) => this.setState({ sets, selectedSets: sets }))
+      .then((sets) => this.setState({ sets, filteredSets: sets }))
       .catch((err) => console.error('error getting sets: ', err));
   }
 
   openBigCard = (id) => {
-    const { selectedSets } = this.state;
-    const findIt = selectedSets.find((x) => x.id === id);
-    this.setState({ selectedSet: findIt });
+    this.setState({ selectedSet: id });
   }
 
   closeBigCard = () => {
-    this.setState({ selectedSet: {} });
+    console.log('WTF', {});
+    this.setState({ selectedSet: '' });
   }
 
   render() {
-    const { selectedSets, selectedSet } = this.state;
+    const { filteredSets, selectedSet } = this.state;
     return (
       <div className="App">
         <div className="container">
           <h1>LEGO SETS</h1>
-          <LegoCardContainer sets={selectedSets} openBigCard={this.openBigCard} selectedSet={selectedSet}/>
-          <BigCard set={selectedSet} closeBigCard={this.closeBigCard}/>
+          <LegoCardContainer sets={filteredSets} selectedSet={selectedSet} openBigCard={this.openBigCard} closeBigCard={this.closeBigCard}/>
         </div>
       </div>
     );
