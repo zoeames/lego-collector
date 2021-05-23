@@ -13,48 +13,48 @@
 
 @media (min-width: 576px) and (max-width: 991px) {
   .LegoCard:nth-child(2n + 1) .BigCard{
-    width: 207%;
+    width: calc(200% + 24px);
   }
 
   .LegoCard:nth-child(2n + 2) .BigCard{
-    width: 207%;
-    left: -107%;
+    width: calc(200% + 24px);
+    left: calc(-100% - 24px);
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .LegoCard:nth-child(3n + 1) .BigCard{
-    width: 316%;
+    width: calc(300% + 48px);
   }
 
   .LegoCard:nth-child(3n + 2) .BigCard{
-    width: 316%;
-    left: -108%;
+    width: calc(300% + 48px);
+    left: calc(-100% - 24px);
   }
 
   .LegoCard:nth-child(3n + 3) .BigCard{
-    width: 316%;
-    left: -216%;
+    width: calc(300% + 48px);
+    left: calc(-200% - 48px);
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .LegoCard:nth-child(4n + 1) .BigCard{
-    width: 422%;
+    width: calc(400% + 72px);
   }
 
   .LegoCard:nth-child(4n + 2) .BigCard{
-    width: 422%;
-    left: -107%;
+    width: calc(400% + 72px);
+    left: calc(-100% - 24px);
   }
 
   .LegoCard:nth-child(4n + 3) .BigCard{
-    width: 422%;
-    left: -214%;
+    width: calc(400% + 72px);
+    left: calc(-200% - 48px);
   }
 
   .LegoCard:nth-child(4n + 4) .BigCard{
-    width: 422%;
-    left: -321%;
+    width: calc(400% + 72px);
+    left: calc(-300% - 72px);
   }
 }
