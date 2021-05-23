@@ -8,7 +8,7 @@ class LegoCard extends React.Component {
   static propTypes = {
     set: PropTypes.object.isRequired,
     openBigCard: PropTypes.func.isRequired,
-    selectedSet: PropTypes.object.isRequired,
+    selectedSet: PropTypes.string.isRequired,
     closeBigCard: PropTypes.func.isRequired,
   }
 
@@ -19,19 +19,25 @@ class LegoCard extends React.Component {
       selectedSet,
       closeBigCard,
     } = this.props;
+
+    const isActiveCard = set.id === selectedSet;
+
+    const renderBigCard = () => {
+      if (isActiveCard) {
+        return <BigCard set={set} closeBigCard={closeBigCard}/>;
+      }
+      return '';
+    };
+
     return (
-      <div className={`LegoCard col mt-4 ${set.id === selectedSet.id ? 'active' : ''}`} onClick={() => openBigCard(set.id)}>
+      <div className={`LegoCard col mt-4 ${isActiveCard ? 'active' : ''}`} onClick={() => openBigCard(set.id)}>
         <div className="card">
           <img alt={`Build of ${set.name}`} src={set.imageUrl} />
           <div className="card-img-overlay">
             <h2 className="title">{set.name}</h2>
           </div>
         </div>
-        {
-          set.id === selectedSet.id
-            ? <BigCard set={selectedSet} closeBigCard={closeBigCard}/>
-            : ''
-        }
+        {renderBigCard()}
       </div>
     );
   }

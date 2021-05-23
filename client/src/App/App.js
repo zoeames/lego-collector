@@ -8,7 +8,7 @@ class App extends React.Component {
   state = {
     sets: [],
     filteredSets: [],
-    selectedSet: {},
+    selectedSet: '',
   }
 
   componentDidMount() {
@@ -18,14 +18,12 @@ class App extends React.Component {
   }
 
   openBigCard = (id) => {
-    const { filteredSets } = this.state;
-    const findIt = filteredSets.find((x) => x.id === id);
-    this.setState({ selectedSet: findIt });
+    this.setState({ selectedSet: id });
   }
 
   closeBigCard = () => {
-    console.log('WTF');
-    this.setState({ selectedSet: {} });
+    console.log('WTF', {});
+    this.setState({ selectedSet: '' });
   }
 
   render() {
@@ -34,7 +32,7 @@ class App extends React.Component {
       <div className="App">
         <div className="container">
           <h1>LEGO SETS</h1>
-          <LegoCardContainer sets={filteredSets} openBigCard={this.openBigCard} selectedSet={selectedSet} closeBigCard={this.closeBigCard}/>
+          <LegoCardContainer sets={filteredSets} selectedSet={selectedSet} openBigCard={this.openBigCard} closeBigCard={this.closeBigCard}/>
         </div>
       </div>
     );

@@ -8,7 +8,7 @@ class LegoCardContainer extends React.Component {
   static propTypes = {
     sets: PropTypes.array.isRequired,
     openBigCard: PropTypes.func.isRequired,
-    selectedSet: PropTypes.object.isRequired,
+    selectedSet: PropTypes.string.isRequired,
     closeBigCard: PropTypes.func.isRequired,
   }
 
