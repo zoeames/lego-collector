@@ -1,9 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './LegoCard.scss';
 
 import BigCard from '../BigCard/BigCard';
 
 class LegoCard extends React.Component {
+  static propTypes = {
+    set: PropTypes.object.isRequired,
+    openBigCard: PropTypes.func.isRequired,
+    selectedSet: PropTypes.object.isRequired,
+    closeBigCard: PropTypes.func.isRequired,
+  }
+
   render() {
     const {
       set,

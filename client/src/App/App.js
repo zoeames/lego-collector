@@ -7,33 +7,34 @@ import setData from '../helpers/data/setData';
 class App extends React.Component {
   state = {
     sets: [],
-    selectedSets: [],
+    filteredSets: [],
     selectedSet: {},
   }
 
   componentDidMount() {
     setData.getSets()
-      .then((sets) => this.setState({ sets, selectedSets: sets }))
+      .then((sets) => this.setState({ sets, filteredSets: sets }))
       .catch((err) => console.error('error getting sets: ', err));
   }
 
   openBigCard = (id) => {
-    const { selectedSets } = this.state;
-    const findIt = selectedSets.find((x) => x.id === id);
+    const { filteredSets } = this.state;
+    const findIt = filteredSets.find((x) => x.id === id);
     this.setState({ selectedSet: findIt });
   }
 
   closeBigCard = () => {
+    console.log('WTF');
     this.setState({ selectedSet: {} });
   }
 
   render() {
-    const { selectedSets, selectedSet } = this.state;
+    const { filteredSets, selectedSet } = this.state;
     return (
       <div className="App">
         <div className="container">
           <h1>LEGO SETS</h1>
-          <LegoCardContainer sets={selectedSets} openBigCard={this.openBigCard} selectedSet={selectedSet} closeBigCard={this.closeBigCard}/>
+          <LegoCardContainer sets={filteredSets} openBigCard={this.openBigCard} selectedSet={selectedSet} closeBigCard={this.closeBigCard}/>
         </div>
       </div>
     );

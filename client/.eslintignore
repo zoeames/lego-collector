@@ -1,4 +1,4 @@
 src/reportWebVitals.js
-dist
-public
+dist/
+public/
 setupTests.js
