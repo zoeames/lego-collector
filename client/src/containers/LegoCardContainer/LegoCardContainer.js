@@ -22,7 +22,7 @@ class LegoCardContainer extends React.Component {
     return (
       <div className="LegoCardContainer">
         <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4">
-            {sets.map((set) => <LegoCard key={set.id} set={set} openBigCard={openBigCard} selectedSet={selectedSet} closeBigCard={closeBigCard}/>)}
+            {sets.map((set) => <LegoCard key={set._id} set={set} openBigCard={openBigCard} selectedSet={selectedSet} closeBigCard={closeBigCard}/>)}
         </div>
       </div>
     );

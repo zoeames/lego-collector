@@ -19,7 +19,7 @@ class BigCard extends React.Component {
               <div className="col-12 col-md-4">
                 <p>{set.setId}</p>
                 <p>{set.yearReleased}</p>
-                <p>Theme: {set.themeId}</p>
+                <p>Theme: {set.themeId.name}</p>
               </div>
               <div className="col-12 col-md-8">
                 <h2>{set.name}</h2>

@@ -20,7 +20,7 @@ class LegoCard extends React.Component {
       closeBigCard,
     } = this.props;
 
-    const isActiveCard = set.id === selectedSet;
+    const isActiveCard = set._id === selectedSet;
 
     const renderBigCard = () => {
       if (isActiveCard) {
@@ -30,7 +30,7 @@ class LegoCard extends React.Component {
     };
 
     return (
-      <div className={`LegoCard col mt-4 ${isActiveCard ? 'active' : ''}`} onClick={() => openBigCard(set.id)}>
+      <div className={`LegoCard col mt-4 ${isActiveCard ? 'active' : ''}`} onClick={() => openBigCard(set._id)}>
         <div className="card">
           <img alt={`Build of ${set.name}`} src={set.imageUrl} />
           <div className="card-img-overlay">
