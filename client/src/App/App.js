@@ -3,7 +3,6 @@ import './App.scss';
 
 import LegoCardContainer from '../containers/LegoCardContainer/LegoCardContainer';
 import setData from '../helpers/data/setData';
-import BigCard from '../components/BigCard/BigCard';
 
 class App extends React.Component {
   state = {
@@ -34,8 +33,7 @@ class App extends React.Component {
       <div className="App">
         <div className="container">
           <h1>LEGO SETS</h1>
-          <LegoCardContainer sets={selectedSets} openBigCard={this.openBigCard} selectedSet={selectedSet}/>
-          <BigCard set={selectedSet} closeBigCard={this.closeBigCard}/>
+          <LegoCardContainer sets={selectedSets} openBigCard={this.openBigCard} selectedSet={selectedSet} closeBigCard={this.closeBigCard}/>
         </div>
       </div>
     );
