@@ -21,8 +21,8 @@ class App extends React.Component {
     this.setState({ selectedSet: id });
   }
 
-  closeBigCard = () => {
-    console.log('WTF', {});
+  closeBigCard = (e) => {
+    e.stopPropagation();
     this.setState({ selectedSet: '' });
   }
 
